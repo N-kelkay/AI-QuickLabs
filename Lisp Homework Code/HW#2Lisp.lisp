@@ -1,3 +1,5 @@
+;*********** paper examples (^^) ***********
+
 (defun mys3 (x)
   (do ((i (1- x) (1- i))
        (result x))
@@ -19,6 +21,8 @@
       ((null to-do) new-list)))
 
 ;(mys '(a 5 c))
+
+
 
 
 
