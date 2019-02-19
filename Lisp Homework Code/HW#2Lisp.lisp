@@ -22,6 +22,15 @@
 
 ;(mys '(a 5 c))
 
+(defun question-6 (input)
+  (let ((y nil))
+    (dolist (w input)
+      (cond ((numberp w))
+            (t (setq y (cons w y)))))
+y))
+
+;(question-6 '(numbers -945 34  4 5 6 are my -45 66 life 1 3 4 6))
+
 
 
 
