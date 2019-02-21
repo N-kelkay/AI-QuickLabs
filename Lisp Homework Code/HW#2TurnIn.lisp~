@@ -28,8 +28,11 @@
 
 ;7
 (defun question-6 (input)
-  (let ((result '()))
-    (dolist (i input result)
-      (cond
-      ((numberp i) (setf result (cons i result)))
-      (t result) )) ))
+  (setq result nil)
+    (loop 
+      (when (null input) (return result))
+      (cond 
+       ((not (numberp (car input) ) ) (setq result (cons (car input) result) ))
+       (t nil))
+      (setq input (cdr input))
+      ))
