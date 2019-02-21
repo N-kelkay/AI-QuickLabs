@@ -14,7 +14,7 @@
       (setf counter (+ counter 1))) counter))
 
 ;5
-(defun mystery-fun-6r (x)
+(defun mystery-fun-6 (x)
   (setq result nil)
   ;Loop just runs the program again and again, although it does not go throught a list
   ;you have to manualy go through the list
