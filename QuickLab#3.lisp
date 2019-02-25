@@ -24,4 +24,38 @@
     (if (equalp x (car y)) (return (car y)))
    (setf y (cdr y)  ) ))
 
-(imember-p 'x '(y x z))
+;(imember-p 'x '(y x z))
+
+;5
+(defun combinations (x y z)
+  (setf comb '())
+  (loop
+   ; (((unless (not (null x)))(unless (not (null y)))(unless (not (null z)))) (return comb))
+    (append (append (car x) (car y)) (car z))
+    (setf x (cdr x))
+    (setf y (cdr y))
+    (setf z (cdr z))
+    ))
+
+(defun combinations2 (x y z)
+  (loop 
+    for a in x
+    for b in y
+    for c in z
+    collect (list (list a b) c) ))
+
+;(combinations2 '(a b c) '(1 2) '(x y))
+
+(defun remove-redundancies (l)
+    (setq finalList '())
+    (dolist (i l finalList)
+        (cond 
+            (
+             (not (member i finalList))
+                 
+             (setq finalList (append finalList (list i)))             
+            )
+        )
+    )
+ )
+
