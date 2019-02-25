@@ -18,4 +18,10 @@
     (setq y (cdr y)) ))
 
 ;4
-(defun imember-p )
+(defun imember-p (x y)
+  (loop
+    (unless (not (null y)) (return nil))
+    (if (equalp x (car y)) (return (car y)))
+   (setf y (cdr y)  ) ))
+
+(imember-p 'x '(y x z))
