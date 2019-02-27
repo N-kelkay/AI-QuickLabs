@@ -24,10 +24,10 @@
     (if (equalp x (car y)) (return (car y)))
    (setf y (cdr y)  ) ))
 
-;(imember-p 'x '(y x z))
+(imember-p 'x '(y x z))
 
 ;5
-(defun combination (x y z)
+(defun combinations (x y z)
     (setq newList '())
     (dolist (first x newList)
         (dolist (second y)
@@ -51,3 +51,5 @@
         )
     )
  )
+
+(imember-p 'x '(y x z))

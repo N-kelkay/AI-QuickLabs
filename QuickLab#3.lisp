@@ -27,7 +27,7 @@
 ;(imember-p 'x '(y x z))
 
 ;5
-(defun combination (x y z)
+(defun combinations (x y z)
     (setq newList '())
     (dolist (first x newList)
         (dolist (second y)
