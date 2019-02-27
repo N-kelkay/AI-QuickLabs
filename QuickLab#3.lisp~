@@ -27,7 +27,7 @@
 ;(imember-p 'x '(y x z))
 
 ;5
-(defun combination3 (x y z)
+(defun combination (x y z)
     (setq newList '())
     (dolist (first x newList)
         (dolist (second y)
@@ -37,7 +37,6 @@
         )
     )
 )
-;(combinations2 '(a b c) '(1 2) '(x y))
 
 ;6
 (defun remove-redundancies (l)
