@@ -24,7 +24,7 @@
     (if (equalp x (car y)) (return (car y)))
    (setf y (cdr y)  ) ))
 
-(imember-p 'x '(y x z))
+;(imember-p 'x '(y x z))
 
 ;5
 (defun combinations (x y z)
@@ -51,5 +51,3 @@
         )
     )
  )
-
-(imember-p 'x '(y x z))
