@@ -20,3 +20,20 @@
                
                (setf tempMax indArg)))))
 
+;2
+(defun calcVal (obj list)
+  (dolist (value list)
+    ((princ "Enter Radius: "))))
+
+;3
+(defun sq (x)
+  (* x x))
+
+(defun recp (x)
+  (/ x))
+
+(defun n-even (x)
+  (cond
+   ((not (floatp (/ x 2))) x)
+   (t (x + 1))))
+
