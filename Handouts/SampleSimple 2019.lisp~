@@ -23,7 +23,7 @@
 
 ;;; ==============================
 
-(defun Adj* () 
+(defun Adj* ()
   (if (= (random 2) 0)
       nil
       (append (Adj) (Adj*))))
@@ -137,7 +137,7 @@
 ;;; ==============================
 
 (defun mappend (fn list)
-  "6.  ----- how is this ￿ different from mapcon ----"
+  "6.  ----- how is this mappend different from mapcon ----"
   (apply #'append (mapcar fn list)))
 
 (defun mklist (x) 
@@ -155,11 +155,6 @@
 
   "7.  ----- write an s-expression that would generate a sentence & write ----
              the sentence"
-
-
-(setf value (generate *grammar*))
-(print value)
-
 
   "8.  ----- change *grammar* from *simple-grammar* to *bigger-grammar* ----
        ----- did you notice the change in senteces generated? describe  ----"
