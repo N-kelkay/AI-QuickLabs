@@ -36,9 +36,9 @@
   (cons (helperMeth first second third) finalList1)
   (setf numofSyl1 (countTotSyllable finalList1))
   (if (not (equalp numofSyl1 5))
-      (than (if (< numofSyl1 5) 
-                (cons (helperMeth first second third) finalList1)
-                (setf finalList1 (cdr finalList1)) ))) 
+      (if (< numofSyl1 5) 
+          (cons (helperMeth first second third) finalList1)
+          (setf finalList1 (cdr finalList1)) )) 
 
   ;adds word to list2
   (cons (helperMeth first second third) finalList1)
@@ -53,11 +53,7 @@
   
   ;combines the finished lists into one to create a nested list
   (setf finalList (list finalList1 finalList2 finalList3))
-
- ;(setf word2 (helperMeth first second third))
-  ;(cond
-   ;((equalp syllableCount 1) (cons word2 finalList1))
-   ;(equalp  
+  
   (format t "~{~{~a ~}~%~}" finalList)
 )
 
@@ -84,11 +80,16 @@
   ;Figures out the number of syllable it has
   (setf num 0)
   (cond
-    ((memberp a first) (setf num 1))
-    ((memberp a second) (setf num 2))
-    ((memberp a third) (setf num 3))
+    ((member a first) (setf num 1))
+    ((member a second) (setf num 2))
+    ((member a third) (setf num 3))
     (t (setf num 0)))
 )
+
+(defun countTotSyllable(a)
+(setf sum 0)
+(dolist (word a sum)
+  (setf sum (+ sum (findSyllable word)))))
 
 
 (haiku)
