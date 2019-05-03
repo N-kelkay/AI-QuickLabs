@@ -7,10 +7,6 @@
 
 (defparameter *school-ops*  ; getting son to school operations become using-ops in GPS
   (list
-   (make-op :name 'drive-son-to-school
-            :preconds '(son-at-home car-works)
-            :add-list '(son-at-school)
-            :del-list '(son-at-home))
    (make-op :name 'shop-installs-battery
             :preconds '(car-needs-battery shop-knows-problem shop-has-money)
             :add-list '(car-works))
@@ -20,13 +16,17 @@
    (make-op :name 'telephone-shop
             :preconds '(know-phone-number)
             :add-list '(in-communication-with-shop))
-   (make-op :name 'look-up-number
-            :preconds '(have-phone-book)
-            :add-list '(know-phone-number))
    (make-op :name 'give-shop-money
             :preconds '(have-money)
             :add-list '(shop-has-money)
             :del-list '(have-money))
+   (make-op :name 'look-up-number
+            :preconds '(have-phone-book)
+            :add-list '(know-phone-number))
+   (make-op :name 'drive-son-to-school
+            :preconds '(son-at-home car-works)
+            :add-list '(son-at-school)
+            :del-list '(son-at-home))
    ))
 
 (defun GPS (start goals using-ops)
